@@ -9,23 +9,42 @@
 {% endif %}
 
 {% if user.userprofile.team == "Accounting" %}
-    only {{ user.userprofile.team }} can see this
+    {% include 'partials/_navbar.html' %}
+    {% include 'partials/_viewquotescard.html' %}
+    {% include 'partials/_salesorderscard.html' %}
+    {% include 'partials/_purchaseorderscard.html' %}
+    {% include 'partials/_invoicecard.html' %}
+    {% include 'partials/_payablescard.html' %}
+    {% include 'partials/_journalentriescard.html' %}
+    {% include 'partials/_bankingcard.html' %}
+    {% include 'partials/_itemreceipts.html' %}
 {% endif %}
 
 {% if user.userprofile.team == "Sales Managers" %}
-    only {{ user.userprofile.team }} can see this
+    {% include 'partials/_navbar.html' %}
+    {% include 'partials/_viewproposalscard.html' %}
+    {% include 'partials/_customerCard.html' %}
 {% endif %}
 
 {% if user.userprofile.team == "Sales Reps" %}
-    only {{ user.userprofile.team }} can see this
+    {% include 'partials/_navbar.html' %}
+    {% include 'partials/_customerCard.html' %}
+    {% include 'partials/_proposalcard.html' %}
+    {% include 'partials/_manageorders  .html' %}
 {% endif %}
 
 {% if user.userprofile.team == "Admin Staff" %}
-    only {{ user.userprofile.team }} can see this
+    {% include 'partials/_navbar.html' %}
+    {% include 'partials/_viewquotescard.html' %}
+    {% include 'partials/_salesorderscard.html' %}
+    {% include 'partials/_purchaseorderscard.html' %}
+    {% include 'partials/_invoicecard.html' %}
+    {% include 'partials/_itemreceipts.html' %}
 {% endif %}
 
 {% if user.userprofile.team == "Executives" %}
-    only {{ user.userprofile.team }} can see this
+    {% include 'partials/_navbar.html' %}
+    {% include 'partials/_customerCard.html' %}
 {% endif %}
 
 {% endblock %}
