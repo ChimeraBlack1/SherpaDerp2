@@ -64,7 +64,7 @@ Dashboard
 
 MVP (Minimum Viable Product)
 -------------------------------
--6 User types (with unique dashboards)
+- User types (with unique dashboards)
 - Executives see a list of proposals, orders, quotes, invoices, POs created by everyone (grouped by team, etc?)
 - Sales Reps can create proposals (start out with 1 static config)
 - Sales Reps can create customers
@@ -75,6 +75,6 @@ MVP (Minimum Viable Product)
 - Administrators can convert POs to SOs.
 - Administrators can see a list of SOs, POs, and invoices created by everyone.
 - Administrators can create customers
-- Accounting just exists for now as a copy of Admin
+- Accounting can create SOs, POs, Invoices, Payables
 - Managers can just see lists of proposals created by reps on their team (and status?)
 - Warehouse just exists for now, until I can fully understand their workflow and incorporate it.
