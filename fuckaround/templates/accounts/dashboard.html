@@ -1,1 +1,15 @@
+{% extends 'base.html' %}
+{% load poll_extras %}
+
+{% block content %}
 <h1>Dashboard</h1>
+
+{% if user.is_authenticated %}
+   Welcome, {{ user.first_name }} {{ user.last_name }} 
+{% endif %}
+
+{% if user.userprofile.team == "Accounting" %}
+    only {{ user.userprofile.team }} can see this
+{% endif %}
+
+{% endblock %}
