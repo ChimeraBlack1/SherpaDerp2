@@ -10,7 +10,6 @@ def register(request):
         email = request.POST['email']
         password = request.POST['password']
         password2 = request.POST['password2']
-        cmsgroup = request.POST['accounting']
 
         #check if passwords match
         if password == password2:

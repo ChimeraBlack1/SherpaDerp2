@@ -12,4 +12,16 @@
     only {{ user.userprofile.team }} can see this
 {% endif %}
 
+{% if user.userprofile.team == "Sales Managers" %}
+    only {{ user.userprofile.team }} can see this
+{% endif %}
+
+{% if user.userprofile.team == "Sales Reps" %}
+    only {{ user.userprofile.team }} can see this
+{% endif %}
+
+{% if user.userprofile.team == "Admin Staff" %}
+    only {{ user.userprofile.team }} can see this
+{% endif %}
+
 {% endblock %}
