@@ -24,4 +24,8 @@
     only {{ user.userprofile.team }} can see this
 {% endif %}
 
+{% if user.userprofile.team == "Executives" %}
+    only {{ user.userprofile.team }} can see this
+{% endif %}
+
 {% endblock %}
