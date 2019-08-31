@@ -1,14 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Dashboard</h1>
-
-{% if user.is_authenticated %}
-   Welcome, {{ user.first_name }} {{ user.last_name }} 
-{% endif %}
 
 {% if user.userprofile.team == "Accounting" %}
-    {% include 'partials/_navbar.html' %}
     {% include 'partials/_viewquotescard.html' %}
     {% include 'partials/_salesorderscard.html' %}
     {% include 'partials/_purchaseorderscard.html' %}
@@ -20,20 +14,17 @@
 {% endif %}
 
 {% if user.userprofile.team == "Sales Managers" %}
-    {% include 'partials/_navbar.html' %}
     {% include 'partials/_viewproposalscard.html' %}
     {% include 'partials/_customerCard.html' %}
 {% endif %}
 
 {% if user.userprofile.team == "Sales Reps" %}
-    {% include 'partials/_navbar.html' %}
     {% include 'partials/_customerCard.html' %}
     {% include 'partials/_proposalcard.html' %}
-    {% include 'partials/_manageorders  .html' %}
+    {% include 'partials/_manageorders.html' %}
 {% endif %}
 
 {% if user.userprofile.team == "Admin Staff" %}
-    {% include 'partials/_navbar.html' %}
     {% include 'partials/_viewquotescard.html' %}
     {% include 'partials/_salesorderscard.html' %}
     {% include 'partials/_purchaseorderscard.html' %}
@@ -42,7 +33,6 @@
 {% endif %}
 
 {% if user.userprofile.team == "Executives" %}
-    {% include 'partials/_navbar.html' %}
     {% include 'partials/_customerCard.html' %}
 {% endif %}
 

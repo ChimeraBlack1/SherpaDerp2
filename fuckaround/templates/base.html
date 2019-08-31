@@ -12,6 +12,10 @@
     <title>SherpaDerp</title>
   </head>
   <body>
+    {% if user.is_authenticated %}
+      Welcome, {{ user.first_name }} {{ user.last_name }} 
+    {% endif %}
+    {% include 'partials/_navbar.html' %}
     {% block content %}
     
     {% endblock %}
