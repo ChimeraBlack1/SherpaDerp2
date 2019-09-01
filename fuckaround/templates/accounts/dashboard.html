@@ -3,14 +3,62 @@
 {% block content %}
 
 {% if user.userprofile.team == "Accounting" %}
-    {% include 'partials/_viewquotescard.html' %}
-    {% include 'partials/_salesorderscard.html' %}
-    {% include 'partials/_purchaseorderscard.html' %}
-    {% include 'partials/_invoicecard.html' %}
-    {% include 'partials/_payablescard.html' %}
-    {% include 'partials/_journalentriescard.html' %}
-    {% include 'partials/_bankingcard.html' %}
-    {% include 'partials/_itemreceipts.html' %}
+
+<div class="container">
+    <div class="row">
+            <!-- Row 1 -->
+            <div class="col-md-4">
+                <a href="#" data-toggle="modal" data-target="#projectSix">
+                    {% include 'partials/_viewquotescard.html' %}
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="#" data-toggle="modal" data-target="#projectThree">
+                    {% include 'partials/_salesorderscard.html' %}
+                </a>
+            </div>
+            <div class="col-md-4">
+                 <a href="#" data-toggle="modal" data-target="#projectFour" >
+                    {% include 'partials/_purchaseorderscard.html' %}
+                </a>
+            </div>
+            <!-- Row 2 -->
+            <div class="col-md-4">
+                <a href="#" data-toggle="modal" data-target="#projectTwo">
+                    {% include 'partials/_invoicecard.html' %}
+                </a>                
+            </div>
+            <div class="col-md-4">
+                <a href="#" data-toggle="modal" data-target="#projectFive">
+                    {% include 'partials/_payablescard.html' %}
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="#" data-toggle="modal" data-target="#projectOne" >
+                    {% include 'partials/_journalentriescard.html' %}
+                </a>
+            </div>
+            <!-- Row 3 -->
+            <div class="col-md-4">
+                <a href="#" data-toggle="modal" data-target="#projectTwo">
+                    {% include 'partials/_bankingcard.html' %}
+                </a>                
+            </div>
+            <div class="col-md-4">
+                <a href="#" data-toggle="modal" data-target="#projectFive">
+                    {% include 'partials/_itemreceipts.html' %}
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="#" data-toggle="modal" data-target="#projectOne" >
+                    {% include 'partials/_items.html' %}
+                </a>
+            </div>
+        </div>    
+    </div>
+</div>
+      
+    
 {% endif %}
 
 {% if user.userprofile.team == "Sales Managers" %}
@@ -30,6 +78,7 @@
     {% include 'partials/_purchaseorderscard.html' %}
     {% include 'partials/_invoicecard.html' %}
     {% include 'partials/_itemreceipts.html' %}
+    {% include 'partials/_items.html' %}
 {% endif %}
 
 {% if user.userprofile.team == "Executives" %}
