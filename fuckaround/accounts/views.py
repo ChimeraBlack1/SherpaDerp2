@@ -56,3 +56,9 @@ def logout(request):
 
 def dashboard(request):
     return render(request, 'accounts/dashboard.html')
+
+# def home_view(request):
+#     {% if user.is_authenticated %}
+#         return "<h1>it worked</h1>"
+#     {% else %}
+#         return "<h1>it worked not logged in</h1>"
