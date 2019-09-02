@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'quotes.apps.QuotesConfig',
     'purchaseorders.apps.PurchaseordersConfig',
     'payables.apps.PayablesConfig',
+    'accounting.apps.AccountingConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
