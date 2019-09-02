@@ -13,3 +13,29 @@ class Products(models.Model):
 
     def __str__(self):
         return self.name
+
+class MFP(models.Model):
+    class Meta:
+        verbose_name_plural = "MFPs"
+    account = models.ForeignKey(Accounts, on_delete=models.DO_NOTHING)
+    number = models.IntegerField(unique=True, default=1)
+    name = models.CharField(max_length=200)
+    desc = models.TextField(blank=True)
+    price = models.DecimalField(max_digits=14, decimal_places=2)
+
+    def __str__(self):
+        return self.name
+
+class Accessory(models.Model):
+    class Meta:
+        verbose_name_plural = "Accessories"
+    MFPs = models.ManyToManyField(MFP)
+    account= models.ForeignKey(Accounts, on_delete=models.DO_NOTHING)
+    number = models.IntegerField(unique=True, default=1)
+    name = models.CharField(max_length=200)
+    desc = models.TextField(blank=True)
+    price = models.DecimalField(max_digits=14, decimal_places=2)
+
+
+    def __str__(self):
+        return self.name

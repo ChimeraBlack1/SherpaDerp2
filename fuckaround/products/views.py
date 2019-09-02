@@ -1,8 +1,12 @@
 from django.shortcuts import render
+from .models import MFP, Accessory
 
 # Create your views here.
 def products(request):
-    return render(request, 'products/products.html')
 
-def productreceipts(request):
-    return render(request, 'products/productReceipts.html')
+    mfpName = MFP.objects.all()
+    
+    context = {
+        "MFP": mfpName
+    }
+    return render(request, 'products/products.html', context)
